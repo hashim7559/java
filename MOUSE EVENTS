@@ -1,0 +1,59 @@
+import java.io.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+public class mg extends Frame 
+implements MouseListener ,MouseMotionListener
+{
+String s=" ";
+public mg()
+{
+addMouseListener(this);
+addMouseMotionListener(this);
+setSize(320,240);
+setVisible(true);
+}
+public void mouseClicked(MouseEvent e)
+{
+s="Mouse Clicked";
+repaint();
+}
+public void mouseReleased(MouseEvent e)
+{
+s="Mouse Up";
+repaint();
+}
+public void mouseEntered(MouseEvent e)
+{
+s="Mouse Entered";
+repaint();
+}
+public void mouseDragged(MouseEvent e)
+{
+s="Mouse Dragged";
+repaint();
+}
+public void mouseMoved(MouseEvent e)
+{
+s="Mouse Moved";
+repaint();
+}
+public void mouseExited(MouseEvent e)
+{
+s="Mouse Exited";
+repaint();
+}
+public void mousePressed(MouseEvent e)
+{
+s="Mouse Pressed";
+repaint();
+}
+public void paint (Graphics g)
+{
+g.drawString(s,50,100);
+}
+}
+<html>
+<applet code="mg" width=400 height=400>
+</applet>
+</html> // save the file” mg.html”
