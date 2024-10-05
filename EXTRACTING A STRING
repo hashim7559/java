@@ -1,0 +1,12 @@
+import java.io.*;
+class sample 
+{
+public static void main(String args[])
+{
+String s=new String("Hello java");
+System.out.println("\nstring extraction");
+System.out.println("\n the given string is"+s);
+System.out.println("The extracted string1 is: "+s.substring(0,5));
+System.out.println("The extracted string1 is: "+s.substring(6));
+}
+}
