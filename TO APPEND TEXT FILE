@@ -1,0 +1,44 @@
+import java.io.*;
+import java.awt.*;
+import java.applet.*;
+import java.awt.event.*;
+class fshp extends Frame implements MouseListener
+{
+String msg="";
+int x=10,y=40;
+fshp(String title)
+{
+super(title);
+addMouseListener(this);
+}
+public void mouseClicked(MouseEvent ke){}
+public void mouseDragged(MouseEvent ke){}
+public void mouseExited(MouseEvent ke){}
+public void mouseEntered(MouseEvent ke){}
+public void mouseReleased(MouseEvent ke){}
+public void mouseMoved(MouseEvent ke){}
+public void mousePressed(MouseEvent ke)
+{
+x=ke.getX();
+y=ke.getY();
+msg="shapes";
+repaint();
+}
+public void paint(Graphics g)
+{
+if((x>20)&&(x<50))
+g.drawOval(x,y,25,30);
+else if((x>=60)&&(x<90))
+g.drawRect(x,y,60,20);
+else if((x>120))
+g.drawOval(x,y,40,40);
+else if(x>10)
+g.drawRect(x,y,20,20);
+}
+public static void main(String args[])
+{
+fshp f=new fshp("my shapes");
+f.setSize(300,300);
+f.setVisible(true);
+}
+}
