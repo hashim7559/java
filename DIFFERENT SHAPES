@@ -1,0 +1,15 @@
+import java.awt.*;
+import java.applet.*;
+import java.io.*;
+public class Program5 extends Applet
+{
+public void paint(Graphics g)
+{
+g.drawLine(10,10,75,70);
+g.drawRect(10,60,40,30);
+g.drawRoundRect(10,100,80,50,10,10);
+g.fillRoundRect(20,110,60,30,5,5);
+g.drawOval(100,100,120,80);
+g.fillOval(110,105,100,70);
+}
+}
