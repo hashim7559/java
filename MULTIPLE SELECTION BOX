@@ -1,0 +1,21 @@
+import javax.swing.*;
+public class Listex
+{
+Listex()
+{
+JFrame f=new JFrame();
+DefaultListModel l1=new DefaultListModel();
+l1.addElement("BCA");
+l1.addElement("BSC.CS");
+l1.addElement("BSC.IT");
+l1.addElement("BSC,CT");
+l1.addElement("BSC");
+JList list= new JList(l1);
+list.setBounds(100,100,75,75);
+f.add(list);
+f.setSize(400,400);
+f.setLayout(null);
+f.setVisible(true);
+}public static void main(String args[])
+{new Listex();
+}}
