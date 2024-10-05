@@ -1,0 +1,35 @@
+import java.awt.*;
+import java.applet.*;
+class mbar extends Frame
+{
+MenuBar mb;
+Menu mfile,medit;
+MenuItem minew,miopen,miexit,micut,micopy,mipaste;
+mbar()
+{
+mb=new MenuBar();
+mfile=new Menu("file");
+medit=new Menu("edit");
+minew=new MenuItem("new");
+miopen=new MenuItem("open");
+miexit=new MenuItem("exit");
+micut=new MenuItem("cut");
+micopy=new MenuItem("copy");
+mipaste=new MenuItem("paste");
+mfile.add(minew);
+mfile.add(miopen);
+mfile.add(miexit);
+medit.add(micut);
+medit.add(micopy);
+medit.add(mipaste);
+mb.add(mfile);
+mb.add(medit);
+setMenuBar(mb);
+}
+public static void main(String args[])
+{
+mbar m=new mbar();
+m.setSize(200,200);
+m.setVisible(true);
+}
+}
