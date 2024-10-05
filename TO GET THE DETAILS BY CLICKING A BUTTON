@@ -1,0 +1,53 @@
+import java.io.*;
+import java.awt.*;
+import java.applet.*;
+import java.awt.event.*;
+class btn extends Frame implements ActionListener
+{
+Button b1,b2;
+TextField t1,t2,t3,t4;
+Label l1,l2,l3,l4;
+btn()
+{
+b1=new Button("my details");
+b2=new Button("exit");
+b1.addActionListener(this);
+b2.addActionListener(this);
+l1=new Label("Nmae");
+l2=new Label("Street");
+l3=new Label("City");
+l4=new Label("Pincode");
+t1=new TextField(10);
+t2=new TextField(10);
+t3=new TextField(10);
+t4=new TextField(10);
+add(l1);
+add(t1);
+add(l2);
+add(t2);
+add(l3);
+add(t4);
+add(l4);
+add(t4);
+add(b1);
+add(b2);
+setLayout(new FlowLayout());
+}
+public static void main(String args[])
+{
+btn b=new btn();
+b.setSize(200,200);
+b.setVisible(true);
+}
+public void actionPerformed(ActionEvent ae)
+{
+if(ae.getSource()==b1)
+{
+t1.setText("ALIA");
+t2.setText("Gandhi street");
+t3.setText("Delhi");
+t4.setText("60001");
+}
+else
+{
+System.exit(0);}}}
